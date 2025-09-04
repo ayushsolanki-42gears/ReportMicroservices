@@ -5,16 +5,16 @@ using ReportMicroservice.Messaging;
 using ReportMicroservice.Models;
 using System.Text.Json;
 
-namespace ReportService.Messaging
+namespace ReportMicroservice.Messaging
 {
-    public sealed class KafkaReportEventProducer : IReportEventProducer
+    public sealed class ReportEventProducer : IReportEventProducer
     {
         private readonly KafkaOptions _options;
-        private readonly ILogger<KafkaReportEventProducer> _logger;
+        private readonly ILogger<ReportEventProducer> _logger;
 
-        public KafkaReportEventProducer(
+        public ReportEventProducer(
             IOptions<KafkaOptions> options,
-            ILogger<KafkaReportEventProducer> logger)
+            ILogger<ReportEventProducer> logger)
         {
             _options = options.Value;
             _logger = logger;

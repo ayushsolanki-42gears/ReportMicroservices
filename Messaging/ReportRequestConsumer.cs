@@ -9,11 +9,11 @@ namespace ReportMicroservice.Messaging
     public sealed class ReportRequestConsumer : IReportRequestConsumer
     {
         private readonly KafkaOptions _options;
-        private readonly ILogger _logger;
+        private readonly ILogger<ReportRequestConsumer> _logger;
 
         public ReportRequestConsumer(
             IOptions<KafkaOptions> options,
-            ILogger logger)
+            ILogger<ReportRequestConsumer> logger)
         {
             _options = options.Value;
             _logger = logger;
