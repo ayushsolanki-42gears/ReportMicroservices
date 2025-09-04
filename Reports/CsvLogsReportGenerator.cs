@@ -1,11 +1,10 @@
 using CsvHelper;
 using CsvHelper.Configuration;
 using Microsoft.Extensions.Logging;
-using ReportMicroservice.Reports;
 using System.Globalization;
 using System.Text;
 
-namespace ReportService.Reports
+namespace ReportMicroservice.Reports
 {
     public sealed class CsvSalesReportGenerator : IReportGenerator
     {
